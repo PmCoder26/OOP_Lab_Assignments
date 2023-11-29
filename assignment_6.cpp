@@ -170,6 +170,7 @@ public:
                 r.at(x)=temp;
                 // printing the sorted book.
                 cout<<"The sorted record book is:"<<endl;
+                printAll();
             }
         }
     }
