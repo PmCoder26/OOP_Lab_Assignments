@@ -1,12 +1,13 @@
 /*
-        Assignment-3.
-
-        Imagine a publishing company which does marketing for book and audio cassette versions.
-        Create a class publication that stores the title (a string) and price (type float) of publications.
-        From this class derive two classes: book which adds a page count (type int) and tape which
-        adds a playing time in minutes (type float). Write a program that instantiates the book and tape class,
-        allows user to enter data and displays the data members. If an exception is caught, replace all the data
-        member values with zero values.
+                                Assignment-3.
+        Imagine a publishing company which does marketingfor book and
+        audio cassette versions.Create a class publication that stores
+        the title (a string) and price (type float) of publications.
+        From this class derive two classes: book which adds a page count
+        (type int) and tape which adds a playing time in minutes (type float).
+        Write a program that instantiates the book and tape class, allows user
+        to enter data and displays the data members. If an exception is caught,
+        replace all the data member values with zero values.
 
  */
 
@@ -25,6 +26,8 @@ class Book:public Publication{
     public:
         void setData(){
             cout<<"Enter the title: ";
+            string temp;
+            cin>>temp;  // for successful reading the title.
             getline(cin, title);
             cout<<"Enter the no.of pages: ";
             cin>>this->count;
@@ -33,11 +36,11 @@ class Book:public Publication{
         }
         void getData(){
             cout<<"The details of the book are: "<<endl;
-            cout<<"************************************************************"<<endl;
+            cout<<"*****************************************************"<<endl;
             cout<<"Title: "<<this->title<<endl;
             cout<<"Total pages: "<<this->count<<endl;
             cout<<"Price: "<<this->price<<endl;
-            cout<<"************************************************************"<<endl;
+            cout<<"*****************************************************"<<endl;
         }
 };
 
@@ -46,6 +49,8 @@ class Tape:public Publication{
     public:
         void setData(){
             cout<<"Enter the title: ";
+            string temp;
+            cin>>temp;  // for successful reading the title.
             getline(cin, title);
             cout<<"Enter the play time of audio in minutes: ";
             cin>>this->playTime;
@@ -54,11 +59,11 @@ class Tape:public Publication{
         }
         void getData(){
             cout<<"The details of the tape are: "<<endl;
-            cout<<"************************************************************"<<endl;
+            cout<<"***************************************************"<<endl;
             cout<<"Title: "<<this->title<<endl;
             cout<<"Total pages: "<<this->playTime<<endl;
             cout<<"Price: "<<this->price<<endl;
-            cout<<"************************************************************"<<endl;
+            cout<<"***************************************************"<<endl;
         }
 };
 
@@ -130,14 +135,16 @@ class Market{
                             int c1 = 1;
                             while (c1 == 1) {
                                 bookSection();
-                                cout << "Do you want to continue book section?\nYes-1.\nNo-2.\nYour Response: ";
+                                cout << "Do you want to continue book section?"
+                                        "\nYes-1.\nNo-2.\nYour Response: ";
                                 cin >> c1;
                             }
                         } else if (choice == 2) {
                             int c1 = 1;
                             while (c1 == 1) {
                                 tapeSection();
-                                cout << "Do you want to continue tape section?\nYes-1.\nNo-2.\nYour Response: ";
+                                cout << "Do you want to continue tape section?"
+                                        "\nYes-1.\nNo-2.\nYour Response: ";
                                 cin >> c1;
                             }
                         }
@@ -149,7 +156,8 @@ class Market{
                         cout<<"Invalid choice entered!"<<endl;
                         break;
                     }
-                    cout << "Do you want to continue program?\nYes-1.\nNo-2.\nYour Response: ";
+                    cout << "Do you want to continue program?"
+                            "\nYes-1.\nNo-2.\nYour Response: ";
                     cin >> res;
                 }
             }
