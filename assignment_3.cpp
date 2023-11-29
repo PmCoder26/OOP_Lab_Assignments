@@ -25,7 +25,7 @@ class Book:public Publication{
     public:
         void setData(){
             cout<<"Enter the title: ";
-            cin>>this->title;
+            getline(cin, title);
             cout<<"Enter the no.of pages: ";
             cin>>this->count;
             cout<<"Enter the price of book: ";
@@ -46,7 +46,7 @@ class Tape:public Publication{
     public:
         void setData(){
             cout<<"Enter the title: ";
-            cin>>this->title;
+            getline(cin, title);
             cout<<"Enter the play time of audio in minutes: ";
             cin>>this->playTime;
             cout<<"Enter the price of tape: ";
